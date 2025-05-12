@@ -10,7 +10,7 @@ Below are some glimpses of the RatioVate application, showcasing its user interf
 
 <!--suppress CheckImageSize -->
 <img src="lib/screenshots/splash.jpg" width="300" alt="RatioVate Splash Screen">
-<img src="lib/screenshots/calculate.jpg" width="300" alt="RatioVate BMI Calculate Screen">
+<img src="lib/screenshots/BMI_calculate.jpg" width="300" alt="RatioVate BMI Calculate Screen">
 <img src="lib/screenshots/result1.jpg" width="300" alt="RatioVate Result Screen 1">
 <img src="lib/screenshots/result2.jpg" width="300" alt="RatioVate Result Screen 2">
 <img src="lib/screenshots/result3.jpg" width="300" alt="RatioVate Result Screen 3">
