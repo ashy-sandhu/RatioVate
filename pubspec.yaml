@@ -1,0 +1,35 @@
+name: ratiovate
+description: "A Flutter application to calculate Body Mass Index (BMI) with a clean UI and improved code structure."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_app_name: ^0.1.0
+  flutter_launcher_icons: ^0.11.0
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "lib/assets/launcher_icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "lib/assets/launcher_icon.png"
+
+flutter_app_name:
+  name: "Ashy Calculator"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/
+    - lib/screenshots/
+
