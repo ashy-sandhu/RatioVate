@@ -10,9 +10,11 @@ class BmiDetailsScreen extends StatelessWidget {
   // Aligning with V2 color logic for categories
   Color _getCategoryColor(String category, BuildContext context) {
     if (category == "Underweight") return AppColors.success; // V2 color
-    if (category == "Normal weight") return Colors.lightBlue.shade400;      // V2 color
+    if (category == "Normal weight") {
+      return Colors.lightBlue.shade400; // V2 color
+    }
     if (category == "Overweight") return Colors.orange.shade600; // V2 color
-    if (category == "Obese") return AppColors.error;          // V2 color
+    if (category == "Obese") return AppColors.error; // V2 color
     return AppColors.textPrimary; // V2 default
   }
 
@@ -32,7 +34,8 @@ class BmiDetailsScreen extends StatelessWidget {
     };
 
     return Card(
-      elevation: 3.0, // V2 often had subtle elevation or relied on neumorphic shadows
+      elevation:
+          3.0, // V2 often had subtle elevation or relied on neumorphic shadows
       margin: EdgeInsets.symmetric(vertical: screenSize.height * 0.015),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       color: AppColors.cardBackground, // V2 card background
@@ -70,14 +73,15 @@ class BmiDetailsScreen extends StatelessWidget {
                     Text(
                       categoryRange,
                       style: TextStyle(
-                        color: AppColors.textSecondary, // V2 secondary text color
+                        color:
+                            AppColors.textSecondary, // V2 secondary text color
                         fontSize: textFontSize,
                       ),
                     ),
                   ],
                 ),
               );
-            }).toList(),
+            }),
           ],
         ),
       ),
@@ -92,7 +96,8 @@ class BmiDetailsScreen extends StatelessWidget {
     final bmiLabelFontSize = screenSize.width * 0.04;
 
     final String currentCategory = BmiCalculator.getBmiCategory(bmi);
-    final Color currentCategoryColor = _getCategoryColor(currentCategory, context);
+    final Color currentCategoryColor =
+        _getCategoryColor(currentCategory, context);
 
     return Card(
       elevation: 3.0,
@@ -154,7 +159,8 @@ class BmiDetailsScreen extends StatelessWidget {
         ),
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: AppColors.textPrimary), // V2 AppBar icon color
+          icon: const Icon(Icons.arrow_back_ios_new_rounded,
+              color: AppColors.textPrimary), // V2 AppBar icon color
           onPressed: () => Navigator.of(context).pop(),
         ),
         elevation: 0, // V2 often had flat AppBars or subtle shadow
@@ -176,4 +182,3 @@ class BmiDetailsScreen extends StatelessWidget {
     );
   }
 }
-

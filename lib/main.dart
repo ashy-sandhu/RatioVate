@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ratiovate BMI Calculator',
-      theme: AppTheme.lightTheme, // Applying the new custom theme
+      theme: AppTheme.lightTheme, // Applying the custom theme
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(), // Initial route remains SplashScreen
     );

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-// Inspired by the UI example, with unique touches for a light, clean, and modern theme.
 class AppColors {
-  static const Color primaryAccent = Color(0xFF40C4FF); // A clear, vibrant light blue (slightly different from example)
-  static const Color cardBackground = Color(0xFFF0F4F8); // A very light, soft grey for the overall background
-  static const Color primaryBackground = Color(0xFFFFFFFF);    // Pure white for cards and main content areas
+  static const Color primaryAccent = Color(0xFF40C4FF);
+  static const Color cardBackground = Color(0xFFF0F4F8);
+  static const Color primaryBackground = Color(0xFFFFFFFF);
   static const Color shadowLight = Color(0xFFFFFFFF);       // For neumorphic light shadow
   static const Color shadowDark = Color(0xFFA8A9AB);        // For neumorphic dark shadow (derived from primaryBackground)
 

@@ -32,8 +32,8 @@ class NeumorphicCard extends StatelessWidget {
     
     BoxBorder? borderStyle;
     if (selected) {
-      // V2 gender selector changed text color, not card. Let's keep card consistent.
-      // If a border is desired for selection: borderStyle = Border.all(color: AppColors.primaryAccent, width: 1.5);
+      // V2 gender selector change card border color.
+      borderStyle = Border.all(color: AppColors.primaryAccent, width: 1.5);
     }
 
     return GestureDetector(
@@ -47,13 +47,13 @@ class NeumorphicCard extends StatelessWidget {
           border: borderStyle, // Apply border if defined
           boxShadow: [
             BoxShadow(
-              color: AppColors.shadowDark.withOpacity(0.5), // V2 style
+              color: AppColors.shadowDark.withValues(alpha: 0.5), // V2 style
               offset: const Offset(5, 5),
               blurRadius: 3,
               spreadRadius: 1,
             ),
             BoxShadow(
-              color: AppColors.shadowLight.withOpacity(0.7), // V2 style
+              color: AppColors.shadowLight.withValues(alpha: 0.7), // V2 style
               offset: const Offset(-5, -5),
               blurRadius: 3,
               spreadRadius: 1,
@@ -94,12 +94,12 @@ class ValueStepper extends StatelessWidget {
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: AppColors.shadowDark.withOpacity(0.1),
+              color: AppColors.shadowDark.withValues(alpha: 0.1),
               offset: const Offset(2, 2),
               blurRadius: 4,
             ),
             BoxShadow(
-              color: AppColors.shadowLight.withOpacity(0.7),
+              color: AppColors.shadowLight.withValues(alpha: 0.7),
               offset: const Offset(-2, -2),
               blurRadius: 4,
             ),
@@ -264,9 +264,9 @@ class _ThermometerHeightSliderState extends State<ThermometerHeightSlider> {
                   maxHeight: widget.maxHeight,
                   trackHeight: trackHeight,
                   accentColor: AppColors.primaryAccent, // V2 philosophy
-                  tickColor: AppColors.textSecondary.withOpacity(0.7), // V2 philosophy
-                  backgroundColor: AppColors.primaryBackground.withOpacity(0.5), // V2 philosophy (light track)
-                  indicatorLineColor: AppColors.primaryAccent.withOpacity(0.7), // V2 philosophy
+                  tickColor: AppColors.textSecondary.withValues(alpha: 0.7), // V2 philosophy
+                  backgroundColor: AppColors.primaryBackground.withValues(alpha: 0.5), // V2 philosophy (light track)
+                  indicatorLineColor: AppColors.primaryAccent.withValues(alpha: 0.7), // V2 philosophy
                 ),
               ),
             ),
@@ -457,7 +457,7 @@ class _BmiScreenState extends State<BmiScreen> {
   void _calculateAndNavigate() {
     if (_selectedGender == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: const Text('Please select a gender.'), backgroundColor: AppColors.error), // V2 style
+        const SnackBar(content: Text('Please select a gender.'), backgroundColor: AppColors.error), // V2 style
       );
       return;
     }
@@ -492,13 +492,13 @@ class _BmiScreenState extends State<BmiScreen> {
     return Scaffold(
       backgroundColor: AppColors.primaryBackground, // V2 style for scaffold background
       appBar: AppBar(
-        title: Text('BMI Calculator', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.textPrimary)), // V2 style
+        title: const Text('BMI Calculator', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.textPrimary)), // V2 style
         centerTitle: true,
         elevation: 0,
         backgroundColor: AppColors.primaryBackground, // V2 often used cardBackground or transparent for AppBar
         actions: [
           IconButton(
-            icon: Icon(Icons.settings_outlined, size: 26, color: AppColors.iconColor), // V2 style
+            icon: const Icon(Icons.settings_outlined, size: 26, color: AppColors.iconColor), // V2 style
             onPressed: () { /* Placeholder for settings */ },
           ),
         ],
